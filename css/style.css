@@ -18,28 +18,200 @@ html, body{
 
 body{
       height: 100%;
+      background-color: #F4F4F4;
 }
 
 *{
   color:grey;
+
   
 }
 
-#navigationTop{
-  color:#333333;
+
+
+.fluidContainer{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
+
 
 #homeLogo{
   max-width: 76px;
   /*margin: 20% auto;*/
 }
 
-.vertical-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Navigation without Bootstrap 4 */
+.topnav {
+    font-family:FormulaSerialRegular;
+    font-size: 1rem;
+    padding: 15px;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #ffffff;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    
+    color: #ffffff;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  text-align: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
   
-  vertical-align: middle;
+}
+
+/* Style the header links */
+.header h1 {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding-top:30px;
+  padding-left: 30px;
+  text-decoration: none;
+  
+  font-family: FormulaSerialBold;
+
+}
+
+.searchTitle{
+  margin: 0px auto;
+}
+.result{
+  margin: 0px auto;
+}
+
+.header .result{
+  float: left;
+  color: grey;
+  text-align: center;
+  padding-top:30px;
+  padding-left: 30px;
+}
+
+
+.header i{
+  align-self: center;
+  float: left;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+
+/* Float the link section to the right */
+.header-right {
+  display: flex;
+  flex: left;
+  float: right;
+  padding-top:30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  
+  
+}
+
+#firstHeader{
+  padding-right: 70px;
+
+}
+
+.mainmenubtn {
+  
+  background-color: transparent;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  font-family: FormulaSerialRegular;
+  font-size: 1.3rem;
+  text-align: left;
+  white-space: nowrap;
+
+}
+
+.mainmenubtn i{
+  margin-left: 10px;
+  float:right;
+}
+
+.mainmenubtn:hover {
+  color:#1BAEDA;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    
+}
+.dropdown-child {
+    display: none;
+    background-color: white;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    min-width: 100px;
+
+}
+.dropdown-child a {
+    font-family: FormulaSerialRegular;
+    font-size: 1rem;
+    color: grey;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-child a:hover{
+  background-color: #F4F4F4;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+
+
+}
+
+p{
+  font-family: FormulaSerialRegular;
+  font-size: 1.3rem;
+}
+
+#userNavIcon{
+  float:right;
+}
+
+#etcIcon .fa-ellipsis-h:hover{
+    color: white;
 }
 
 .btn-link{
@@ -50,10 +222,6 @@ body{
   color:#1BAEDA;
 }
 
-h1{
-  font-family: FormulaSerialBold;
-  
-}
 
 #singleWordStyle{
   color:#333333;
@@ -67,43 +235,48 @@ h1{
 }
 
 
-.removeTopGutters{
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-#removeBottomGutters{
-  margin-bottom: 0;
-  background-color: #F4F4F4;
-  
-}
-
-#removeBottomGutters > [class*='col-']{
-  padding-bottom: 0;
-
-}
-
 hr{
-  background-color: grey;
   border: 1px solid grey;
-  margin: 0;
-  padding: 0;
+  background-color: grey;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+
 }
 
 .gallery{
     background-color: #F4F4F4;
 }
 
-#card{
+.lightboxDiv{
+  
+}
 
+#card{
+  
   border: 1px solid #FFFFFF;
   border-radius: 5px;
   background-color: #FFFFFF;
   transition: box-shadow 0.2s ease-in-out;
 }
 
-.lightboxDiv{
-  
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.column{
+  position:relative;
+  padding: 15px;
+  float: left;
+  width: calc(33.33% - 30px);
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #card:hover{
@@ -113,29 +286,26 @@ hr{
 #container{
   position: relative;
   overflow: hidden;
+  font-family:FormulaSerialRegular;
 }
 
 #container img{
   display: flex; /*remove this*/
-     float: left; /*remove this*/
-    
+  float: left; /*remove this*/
+
 }
 
 .image{
   opacity: 1;
-  width: 100%;
+  width: calc(100% - 20px);
   height:45vh!important;
   object-fit: cover;
   transition: .5s ease;
   backface-visibility: hidden;
-  
-}
-
-.img-thumbnail{
-  width: 100%;
   border:none;
-  padding: 15px;
+  padding: 10px;
   padding-bottom: 0;
+  
 }
 
 .text {
@@ -145,6 +315,8 @@ hr{
   padding: 16px 32px;
   z-index: 10;
   border:none;
+  font-family: FormulaSerialRegular;
+  font-size: 1rem;
   
 }
 
@@ -164,7 +336,8 @@ hr{
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
-   z-index: 10;
+  z-index: 10;
+ 
 }
 
 
@@ -176,12 +349,36 @@ hr{
   opacity: 1;
 }
 
-.socialResponse{
-  padding-right: 15px;
+.caption{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+
+.socialIcon{
+    display: inline;
+    
+    
+}
+
+.socialResponse{
+  align-self: center;
+  padding-right: 1rem;
+}
+
+.socialResponse p{
+  font-family: FormulaSerialRegular;
+  font-size: 0.875rem;
+}
+
 
 .socialResponse a{
   text-decoration: none;
+}
+
+.mr-3{
+  margin-right: 15px;
 }
 
 .socialResponse .fa-eye:hover{
@@ -200,8 +397,12 @@ hr{
 
 
 .author{
-  padding-top: 3%;
+  
   padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .author p{
@@ -209,16 +410,23 @@ hr{
   font-weight: bold;
 }
 
+.authorContent{
+  align-self: center;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+
 #profileIcon{
+  align-self: center;
+  top: 8px;
   height: 6%;
   width: 6%;
   background-size: cover;
-  display: block;
   border-radius: 100px;
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
 }
-
 
 .socialResponse button{
   border: none;
@@ -231,22 +439,100 @@ hr{
 
 
 
-
-
-
 /*---Media Queries --*/
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   h1{
     font-size: 1.875rem;
   }
 
   p{
-    font-size:0.875rem;
+    font-size:1rem;
   }
+  .mainmenubtn{
+    font-size:1rem;
+  }
+
+  .column {
+    padding: 15px;
+    float:left;
+    width: calc(50% - 30px);
+  }
+
+
+  
+
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
   h1{
     font-size:  1.75rem;
+  }
+
+  .column {
+    padding: 15px;
+    float: left;
+    width: calc(100% - 30px);
+
+  }
+
+  .header h1{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header .result{
+    float: none;
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+  }
+  .header-right{
+    float: none;
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+  }
+  .header i{
+    padding-top: 10px;
+    align-self: center;
+    float: left;
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+    padding-right: 10px;
+  }
+
+  .dropdown{
+
+    align-content: center;
+  }
+  .mainmenubtn i{
+    margin-left: 10px;
+    float:right;
+  }
+
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive #userNavIcon{
+    float:left;
   }
 
 }
@@ -259,6 +545,17 @@ hr{
     font-size: 0.875rem;
   }
 
+  .column {
+    padding: 15px;
+    float: left;
+    width: calc(100% - 30px);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+  
 }
 
 
@@ -299,10 +596,7 @@ figure {
           transform: translateZ(0);
   will-change: transform;
 }
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 1rem;
-}
+
 
 
 

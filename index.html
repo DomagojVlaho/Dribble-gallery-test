@@ -4,11 +4,9 @@
   <title>Point Jupiter zadatak - Domagoj Vlaho</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />-->
   <link rel="stylesheet" href="css/style.css" />
   
   <link rel="stylesheet" href="css/lightbox.css" />
@@ -19,232 +17,210 @@
 </head>
 <body>
 		<!-- Navigation -->
-		<nav id="navigationTop" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html"><img id="homeLogo" src="assets/img/dribbble-brand-kit/dribbble-logo-white.png"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Shots</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Designers</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Teams</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Jobs</a>
-						</li>
-					</ul>
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link fas fa-user-circle fa-2x" href="index.html"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<div class="topnav" id="myTopnav">
+		  <a class="navbar-brand" href="index.html"><img id="homeLogo" src="assets/img/dribbble-brand-kit/dribbble-logo-white.png"></a>
+		  <a href="#shots"  class="active">Shots</a>
+		  <a href="#contact">Designers</a>
+		  <a href="#about">Teams</a>
+		  <a href="#about">Jobs</a>
+		  <a id="etcIcon" href="#etc">
+		  	<i class="fas fa-ellipsis-h"></i>
+		  </a>
+		  <a id="userNavIcon" class="fas fa-user-circle fa-2x" href="index.html"></a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		    <i class="fa fa-bars "></i>
+		  </a>
+		</div>
 
 		<!-- Search result section -->
-		<div class="container-fluid">
-			<div class="row jumbotron"  id="removeBottomGutters">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 removeTopGutters" >
-					<h1>Search / <span id="singleWordStyle">websites</span></h1>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 d-flex justify-content-md-end removeTopGutters">
-					<div class="align-self-center ">
-						<i class="fas fa-tag  d-inline "></i>
-						<p class="d-inline ">shots tagged <span id="tagLinkStyle">websites</span></p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 d-flex align-items-center">
-					<div class="align-self-center">
-						<p class="d-inline ">Shot results for <span id="singleWordStyle">websites</span></p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 d-flex justify-content-md-end">
-					<div class="align-self-center">
-						<div class="dropdown ">
-					  		<button class="btn btn-link dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    		Latest
-					  		</button>
-					  		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-					    		<a class="dropdown-item" href="#">Most viewed</a>
-					    		<a class="dropdown-item" href="#">Most liked</a>
-					  		</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12">
-					<hr>
-				</div>
-			</div>
+		<div class="header">
+		  <h1 class="searchTitle">Search / <span id="singleWordStyle">websites</span></h1>
+		  <div id="firstHeader" class="header-right">
+		  	<i class="fas fa-tag"></i>
+		    <p>shots tagged <span id="tagLinkStyle">websites</span></p>
+		  </div>
 		</div>
+
+		<div class="header">
+			<p class="result">Shot results for <span id="singleWordStyle">websites</span></p>
+			<div class="header-right">
+				<div class="dropdown">
+				  <button class="mainmenubtn">Latest<i class="fas fa-sort-down"></i></button>
+				  <div class="dropdown-child">
+				    <a href="#">Most viewed</a>
+				    <a href="#">Most liked</a>
+				  </div>
+				</div>
+				
+			</div>
+
+		</div>
+		
+		<hr>
+		
+
+
 
 		<!-- Gallery section -->
 		<section class="gallery">
-				<div class="container-fluid">
+				<div class="fluidContainer">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4  ">
+						<div class="column">
 							<div id="card">
 								<div class="lightboxDiv">
 									<div id="container">
-										<a id="lightboxImage1" href="assets/img/galleryImages/painter-1.jpg" data-lightbox="myGallery"   data-title="Photoshop - painter"><img  src="assets/img/galleryImages/painter-1.jpg" class="img-fluid img-thumbnail image" alt="Painter image" ></a>
+										<a id="lightboxImage1" href="assets/img/galleryImages/painter-1.jpg" data-lightbox="myGallery"   data-title="Photoshop - painter"><img  src="assets/img/galleryImages/painter-1.jpg" class="image" alt="Painter image" ></a>
 										<div class="middle">
 											<div class="text" id="view1" onClick="openModal()">View image</div>
 										</div>
 									</div>
-									<div class="caption py-2 d-flex justify-content-end">
-										<div class="socialResponse align-self-center">
-											<a href="#"><i class="fas fa-eye d-inline"></i></a>
-											<p id="seenCount" class="d-inline mr-3">0</p>
-											<a href="#"><i class="fas fa-comment d-inline"></i></a>
-											<p id="commentCount" class="d-inline mr-3">0</p>
-											<button  id="button1" onClick="onClickB1()" ><i class="fas fa-heart d-inline"></i></button>
-											<p id="likedCount" class="d-inline "><a id="clicks1">0</a></p>	
+									<div class="caption">
+										<div class="socialResponse">
+											<a href="#"><i class="socialIcon fas fa-eye"></i></a>
+											<p id="seenCount" class="socialIcon mr-3">0</p>
+											<a href="#"><i class="socialIcon fas fa-comment "></i></a>
+											<p id="commentCount" class="socialIcon mr-3">0</p>
+											<button  id="button1" onClick="onClickB1()" ><i class="socialIcon fas fa-heart "></i></button>
+											<p id="likedCount" class="socialIcon"><a id="clicks1">0</a></p>	
 										</div>
 									</div>
 									
 								</div>
 							</div>
-							<div class="author d-flex ">
-								<div class="align-self-center">
-									<img id="profileIcon" src="assets/img/head_profile.jpg" class="d-inline align-center">
-									<p class="d-inline">Domagoj Vlaho</p>
+							<div class="author">
+								<div class="authorContent">
+									<img id="profileIcon" src="assets/img/head_profile.jpg" class="socialIcon">
+									<p class="socialIcon">Domagoj Vlaho</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
+						<div class="column" >
 							<div id="card">
 								<div id="container">
-									<a id="lightboxImage2" href="assets/img/galleryImages/doubleExposure.jpg" data-lightbox="myGallery" data-title="Photoshop - double exposure"><img src="assets/img/galleryImages/doubleExposure.jpg" class="img-fluid img-thumbnail image" alt="Double exposure image" ></a>
+									<a id="lightboxImage2" href="assets/img/galleryImages/doubleExposure.jpg" data-lightbox="myGallery" data-title="Photoshop - double exposure"><img src="assets/img/galleryImages/doubleExposure.jpg" class="image" alt="Double exposure image" ></a>
 									<div class="middle">
 										<div class="text" id="view2" onClick="openModal()">View image</div>
 									</div>
 								</div>
 								<div class="caption py-2 d-flex justify-content-end">
-									<div class="socialResponse align-self-center">
-										<a href="#"><i class="fas fa-eye d-inline"></i></a>
-										<p id="seenCount" class="d-inline mr-3">0</p>
-										<a href="#"><i class="fas fa-comment d-inline"></i></a>
-										<p id="commentCount" class="d-inline mr-3">0</p>
-										<button id="button2" onClick="onClickB2()" ><i class="fas fa-heart d-inline"></i></button>
-										<p id="likedCount" class="d-inline "><a id="clicks2">0</a></p>		
+									<div class="socialResponse">
+										<a href="#"><i class="socialIcon fas fa-eye"></i></a>
+										<p id="seenCount" class="socialIcon mr-3">0</p>
+										<a href="#"><i class="socialIcon fas fa-comment"></i></a>
+										<p id="commentCount" class="socialIcon mr-3">0</p>
+										<button id="button2" onClick="onClickB2()" ><i class="socialIcon fas fa-heart "></i></button>
+										<p id="likedCount" class="socialIcon "><a id="clicks2">0</a></p>		
 									</div>
 								</div>
 							</div>
-							<div class="author d-flex ">
-								<div class="align-self-center">
-									<img id="profileIcon" src="assets/img/head_profile.jpg" class="d-inline align-center">
-									<p class="d-inline">Domagoj Vlaho</p>
+							<div class="author ">
+								<div class="authorContent">
+									<img id="profileIcon" src="assets/img/head_profile.jpg" class="socialIcon">
+									<p class="socialIcon">Domagoj Vlaho</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
+						<div class="column" >
 							<div id="card">
 								<div id="container">
-									<a id="lightboxImage3" href="assets/img/galleryImages/circle_gradients.png" data-lightbox="myGallery" data-title="Illustrator - circle gradient logo"><img src="assets/img/galleryImages/circle_gradients.png" class="img-fluid img-thumbnail image" alt="Illustrator - circle gradient logo" ></a>
+									<a id="lightboxImage3" href="assets/img/galleryImages/circle_gradients.png" data-lightbox="myGallery" data-title="Illustrator - circle gradient logo"><img src="assets/img/galleryImages/circle_gradients.png" class="image" alt="Illustrator - circle gradient logo" ></a>
 									<div class="middle">
 										<div class="text" id="view3" onClick="openModal()">View image</div>
 									</div>
 								</div>
-								<div class="caption py-2 d-flex justify-content-end">
-									<div class="socialResponse align-self-center">
-										<a href="#"><i class="fas fa-eye d-inline"></i></a>
-										<p id="seenCount" class="d-inline mr-3">0</p>
-										<a href="#"><i class="fas fa-comment d-inline"></i></a>
-										<p id="commentCount" class="d-inline mr-3">0</p>
-										<button id="button3" onClick="onClickB3()" ><i class="fas fa-heart d-inline"></i></button>
-										<p id="likedCount" class="d-inline "><a id="clicks3">0</a></p>		
+								<div class="caption">
+									<div class="socialResponse">
+										<a href="#"><i class="socialIcon fas fa-eye"></i></a>
+										<p id="seenCount" class="socialIcon mr-3">0</p>
+										<a href="#"><i class="socialIcon fas fa-comment "></i></a>
+										<p id="commentCount" class="socialIcon mr-3">0</p>
+										<button id="button3" onClick="onClickB3()" ><i class="socialIcon fas fa-heart "></i></button>
+										<p id="likedCount" class="socialIcon"><a id="clicks3">0</a></p>		
 									</div>
 								</div>
 							</div>
-							<div class="author d-flex ">
-								<div class="align-self-center">
-									<img id="profileIcon" src="assets/img/head_profile.jpg" class="d-inline align-center">
-									<p class="d-inline">Domagoj Vlaho</p>
+							<div class="author ">
+								<div class="authorContent">
+									<img id="profileIcon" src="assets/img/head_profile.jpg" class="socialIcon">
+									<p class="socialIcon">Domagoj Vlaho</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
+						<div class="column" >
 							<div id="card">
 								<div id="container">
-									<a id="lightboxImage4" href="assets/img/galleryImages/owl.jpg" data-lightbox="myGallery" data-title="Geometric owl"><img src="assets/img/galleryImages/owl.jpg" class="img-fluid img-thumbnail image" alt="Geometric owl" ></a>
+									<a id="lightboxImage4" href="assets/img/galleryImages/owl.jpg" data-lightbox="myGallery" data-title="Geometric owl"><img src="assets/img/galleryImages/owl.jpg" class="image" alt="Geometric owl" ></a>
 									<div class="middle">
 										<div class="text" id="view4" onClick="openModal()">View image</div>
 									</div>
 								</div>
-								<div class="caption py-2 d-flex justify-content-end">
-									<div class="socialResponse align-self-center">
-										<a href="#"><i class="fas fa-eye d-inline"></i></a>
-										<p id="seenCount" class="d-inline mr-3">0</p>
-										<a href="#"><i class="fas fa-comment d-inline"></i></a>
-										<p id="commentCount" class="d-inline mr-3">0</p>
-										<button id="button4" onClick="onClickB4()" ><i class="fas fa-heart d-inline"></i></button>
-										<p id="likedCount" class="d-inline "><a id="clicks4">0</a></p>		
+								<div class="caption">
+									<div class="socialResponse">
+										<a href="#"><i class="socialIcon fas fa-eye "></i></a>
+										<p id="seenCount" class="socialIcon mr-3">0</p>
+										<a href="#"><i class="socialIcon fas fa-comment "></i></a>
+										<p id="commentCount" class="socialIcon mr-3">0</p>
+										<button id="button4" onClick="onClickB4()" ><i class="socialIcon fas fa-heart "></i></button>
+										<p id="likedCount" class="socialIcon"><a id="clicks4">0</a></p>		
 									</div>
 								</div>
 							</div>
-							<div class="author d-flex">
-								<div class="align-self-center">
-										<i  class="fas fa-user-circle fa-lg d-inline"></i>
-										<p class="d-inline">Unknown user</p>
+							<div class="author">
+								<div class="authorContent">
+										<i  class="fas fa-user-circle fa-lg socialIcon"></i>
+										<p class="socialIcon">Unknown user</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-							<div id="card">
+						<div class="column" >
+							<div id="card" >
 								<div  id="container">
-									<a id="lightboxImage5" href="assets/img/galleryImages/firewatch.jpg" data-lightbox="myGallery" data-title="Firewatch image"><img src="assets/img/galleryImages/firewatch.jpg" class="img-responsive img-thumbnail image" alt="Firewatch image" ></a>
+									<a id="lightboxImage5" href="assets/img/galleryImages/firewatch.jpg" data-lightbox="myGallery" data-title="Firewatch image"><img src="assets/img/galleryImages/firewatch.jpg" class="image" alt="Firewatch image" ></a>
 									<div class="middle">
 										<div class="text" id="view5" onClick="openModal()">View image</div>
 									</div>
 								</div>
-								<div class="caption py-2 d-flex justify-content-end">
-									<div class="socialResponse align-self-center">
-										<a href="#"><i class="fas fa-eye d-inline"></i></a>
-										<p id="seenCount" class="d-inline mr-3">0</p>
-										<a href="#"><i class="fas fa-comment d-inline"></i></a>
-										<p id="commentCount" class="d-inline mr-3">0</p>
-										<button id="button5" onClick="onClickB5()" ><i class="fas fa-heart d-inline"></i></button>
-										<p id="likedCount" class="d-inline "><a id="clicks5">0</a></p>		
+								<div class="caption">
+									<div class="socialResponse">
+										<a href="#"><i class="socialIcon fas fa-eye"></i></a>
+										<p id="seenCount" class="socialIcon mr-3">0</p>
+										<a href="#"><i class="socialIcon fas fa-comment "></i></a>
+										<p id="commentCount" class="socialIcon mr-3">0</p>
+										<button id="button5" onClick="onClickB5()" ><i class="socialIcon fas fa-heart"></i></button>
+										<p id="likedCount" class="socialIcon "><a id="clicks5">0</a></p>		
 									</div>
 								</div>
 							</div>
-							<div class="author d-flex">
-								<div class="align-self-center">
-										<i  class="fas fa-user-circle fa-lg d-inline"></i>
-										<p class="d-inline">Unknown user</p>
+							<div class="author">
+								<div class="authorContent">
+										<i  class="fas fa-user-circle fa-lg socialIcon"></i>
+										<p class="socialIcon">Unknown user</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+						<div class="column" >
 							<div id="card">
 								<div id="container">
-									<a id="lightboxImage6" href="assets/img/galleryImages/forrest.jpg" data-lightbox="myGallery" data-title="Forrest image"><img src="assets/img/galleryImages/forrest.jpg" class="img-fluid img-thumbnail image" alt="Forrest image" ></a>
+									<a id="lightboxImage6" href="assets/img/galleryImages/forrest.jpg" data-lightbox="myGallery" data-title="Forrest image"><img src="assets/img/galleryImages/forrest.jpg" class="image" alt="Forrest image" ></a>
 									<div class="middle">
 										<div class="text" id="view6" onClick="openModal()">View image</div>
 									</div>
 								</div>
-								<div class="caption py-2 d-flex justify-content-end">
-									<div class="socialResponse align-self-center">
-										<a href="#"><i class="fas fa-eye d-inline"></i></a>
-										<p id="seenCount" class="d-inline mr-3">0</p>
-										<a href="#"><i class="fas fa-comment d-inline"></i></a>
-										<p id="commentCount" class="d-inline mr-3">0</p>
-										<button id="button6" onClick="onClickB6()" ><i class="fas fa-heart d-inline"></i></button>
-										<p id="likedCount" class="d-inline "><a id="clicks6">0</a></p>		
+								<div class="caption">
+									<div class="socialResponse">
+										<a href="#"><i class="socialIcon fas fa-eye"></i></a>
+										<p id="seenCount" class="socialIcon mr-3">0</p>
+										<a href="#"><i class="socialIcon fas fa-comment"></i></a>
+										<p id="commentCount" class="socialIcon mr-3">0</p>
+										<button id="button6" onClick="onClickB6()" ><i class="socialIcon fas fa-heart "></i></button>
+										<p id="likedCount" class="socialIcon "><a id="clicks6">0</a></p>		
 									</div>
 								</div>
 							</div>
-							<div class="author d-flex">
-								<div class="align-self-center">
-										<i  class="fas fa-user-circle fa-lg d-inline"></i>
-										<p class="d-inline">Unknown user</p>
+							<div class="author">
+								<div class="authorContent">
+										<i  class="fas fa-user-circle fa-lg socialIcon"></i>
+										<p class="socialIcon">Unknown user</p>
 								</div>
 							</div>
 						</div>
@@ -253,8 +229,6 @@
 		</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
 <!--<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
